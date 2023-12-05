@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Tức</title>
+</head>
+<style>
+    .ndHeader {
+        padding-left: 10px;
+        color: white;
+    }
+
+    header {
+        background-color: rgb(46, 172, 46);
+    }
+
+    /* Đặt màu chữ của mục "Mới Nhất" thành màu xanh */
+    .breadcrumb-item.active a {
+        color: blue !important;
+    }
+
+    /* Đặt màu chữ của các mục còn lại thành màu trắng */
+    .breadcrumb-item a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .card-img-top {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h3,
+    h4 {
+        color: green;
+    }
+
+    footer {
+        height: 40px;
+        /* Đặt chiều cao của footer là 40px */
+        background-color: #28a745;
+        /* Đặt màu nền cho footer, có thể thay đổi giá trị màu sắc theo ý của bạn */
+        color: white;
+        /* Đặt màu chữ trong footer, nếu cần thiết */
+        text-align: center;
+        /* Canh giữa nội dung trong footer */
+        padding-top: 10px;
+        /* Để tăng khoảng cách phía trên nội dung trong footer */
+    }
+    .card-group .card img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.card-group .card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-height: 250px; /* Đặt chiều cao tối đa của ảnh tại đây */
+    width: 100%;
+}
+    @media screen and (max-width:1100px) {
+        .card{
+              width: 100%;
+        }
+    }
+    /* @media screen and (max-width: 990px) { */
+</style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/boo
+tstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootst
+rap.bundle.min.js"></script>
+
+<body>
+    <header>
+        <div class="d-flex justify-content-between ">
+            <div class="d-lg-flex p-3  ">
+                <img src="../AssignmentHT/img/logo.jpg" alt="" width="80px" height="80px" class="rounded">
+                <div class="ndHeader">
+                    <h2>S Du Lịch</h2>
+                    <nav>Tin tức cập nhập thường xuyên <br> và chính xác </nav>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../AssignmentHT/index.html">Trang Chủ</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Tin Tức</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../AssignmentHT/lienhe.html">Liên Hệ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Thêm
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Đặt Lịch</a></li>
+                                    <li><a class="dropdown-item" href="#">HOLINE</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Nhắn Tin Trực Tiếp</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Tìm Kiếm" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit"
+                                style="background-color: blue; color: black;">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb ">
+                    <li class="breadcrumb-item"><a href="#">Mới Nhất</a></li>
+                    <li class="breadcrumb-item " aria-current="page"><a href="">Thời Tiết</a></li>
+                    <li class="breadcrumb-item " aria-current="page"><a href="">Du Lịch</a> </li>
+                    <li class="breadcrumb-item " aria-current="page"><a href="">Thăm Quan</a></li>
+                    <li class="breadcrumb-item " aria-current="page"><a href="">Trải Nghiệm</a></li>
+                    <li class="breadcrumb-item " aria-current="page"><a href="">Du Lịch Tâm Linh</a></li>
+                    <li class="breadcrumb-item " aria-current="page"><a href="">Điểm Tuần</a></li>
+
+                </ol>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="row">
+
+
+            <div class="col-md-8 m-4 ">
+                <h3>HOT NEW</h3>
+                <div class="d-flex">
+                    <div class="card mb-3">
+                        <img src="../AssignmentHT/img/anhtintuc.jpg" class="card-img-top " width="" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Cao Bằng</h5>
+                            <p class="card-text">Trên những tràn ruộng bậc thang, đồng bào người Mông, người Hà Nhì,
+                                người Dao vẫn cần cù bám đất, bám ruộng canh tác,
+                                tạo nên những mùa vàng ở thung lũng Thề Pả. Họ là những người góp phần bảo vệ, giữ gìn
+                                danh thắng này và cuộc sống của họ cũng chính là một phần của danh thắng Thề Pả.</p>
+                            <p class="card-text"><small class="text-body-secondary">Nguồn: Báo Tuổi Trẻ</small></p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="d-flex mt-4">
+
+                    <div class="card-group">
+                        <div class="card mt-2">
+                            <img src="../AssignmentHT/img/anhtintuc1.jpg" style="height: 250px" class="
+                                card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Du Lịch Tâm Linh</h5>
+                                <p class="card-text">Du lịch tâm linh chưa chưa bao giờ là lỗi thời, bởi điều đó mang nét truyền thống và 
+                                    cội nguồn. Hãy cùng S DU LỊCH trải nghiệm nhé!
+                                </p>
+                                <p class="card-text"><small class="text-body-secondary">Cập nhật 1 ngày trước</small>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card m-2">
+                            <img src="../AssignmentHT/img/anhtintuc2.webp" class="card-img-top"
+                                style="height: 250px;" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Du Lịch Kiểu Mới</h5>
+                                <p class="card-text">
+                                    Hình thức du lịch nay đã trở lên đa dạng hơn cùng với vô số những trải nghiệm mới lạ
+                                    có thể lần đầu tiên bạn nghe thấy sẽ làm bạn vô cùng thích thú.
+                                </p>
+                                <p class="card-text"><small class="text-body-secondary">Cập nhật 2 ngày trước</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 m-4">
+                <h4>Tin Tức</h4>
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../AssignmentHT/img/anhthiennhien5.jpg" style="height: 100%;width: 100%; object-fit: cover;
+                            "
+                                class="img-fluid rounded-start"  alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h6 class="card-title">Du Lịch Bền Vững</h5>
+                                <p class="card-text">
+                                <p class="card-text"><small class="text-body-secondary">Diểm đến hàng năm</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../AssignmentHT/img/anhtintuc1.jpg" class="img-fluid rounded-start"
+                                style="height: 100%;width: 100%; object-fit: cover;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h6 class="card-title">Giá siêu tiếp cận</h5>
+                                <p class="card-text">
+                                <p class="card-text"><small class="text-body-secondary">Du lịch bây giờ có...</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../AssignmentHT/img/anhthiennhien3.jpg" style="height: 100%;width: 100%; object-fit: cover;"
+                                class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h6 class="card-title">Trải nghiệm con dốc dài nhất Việt Nam</h6>
+                                <p class="card-text">
+                                <p class="card-text"><small class="text-body-secondary">Đèo Lũng Cú</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../AssignmentHT/img/anhthiennhien5.jpg" style="height: 100%;width: 100%; object-fit: cover;
+                            "
+                                class="img-fluid rounded-start"  alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h6 class="card-title">Du Lịch Bền Vững</h5>
+                                <p class="card-text">
+                                <p class="card-text"><small class="text-body-secondary">Diểm đến hàng năm</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../AssignmentHT/img/anhtintuc1.jpg" class="img-fluid rounded-start"
+                                style="height: 100%;width: 100%; object-fit: cover;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h6 class="card-title">Giá siêu tiếp cận</h5>
+                                <p class="card-text">
+                                <p class="card-text"><small class="text-body-secondary">Du lịch bây giờ có...</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../AssignmentHT/img/anhthiennhien3.jpg" style="height: 100%;width: 100%; object-fit: cover;"
+                                class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h6 class="card-title">Trải nghiệm con dốc dài nhất Việt Nam</h6>
+                                <p class="card-text">
+                                <p class="card-text"><small class="text-body-secondary">Đèo Lũng Cú</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../AssignmentHT/img/anhthiennhien5.jpg" style="height: 100%;width: 100%; object-fit: cover;
+                            "
+                                class="img-fluid rounded-start"  alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h6 class="card-title">Du Lịch Bền Vững</h5>
+                                <p class="card-text">
+                                <p class="card-text"><small class="text-body-secondary">Diểm đến hàng năm</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../AssignmentHT/img/anhtintuc1.jpg" class="img-fluid rounded-start"
+                                style="height: 100%;width: 100%; object-fit: cover;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h6 class="card-title">Giá siêu tiếp cận</h5>
+                                <p class="card-text">
+                                <p class="card-text"><small class="text-body-secondary">Du lịch bây giờ có...</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../AssignmentHT/img/anhthiennhien3.jpg" style="height: 100%;width: 100%; object-fit: cover;"
+                                class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h6 class="card-title">Trải nghiệm con dốc dài nhất Việt Nam</h6>
+                                <p class="card-text">
+                                <p class="card-text"><small class="text-body-secondary">Đèo Lũng Cú</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <footer class="">
+        <div class="text-center">
+            Bản quyền thuộc media
+        </div>
+
+    </footer>
+</body>
+
+</html>

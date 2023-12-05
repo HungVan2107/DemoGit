@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du Lịch Việt</title>
+    <!-- <style>
+        main {
+            background-image: url(../AssignmentHT/img/anhnenMain.jpg);
+            background-size: cover;
+            /* Hiển thị hình ảnh sao cho nó che đầy toàn bộ kích thước của phần main */
+            background-position: center;
+            /* Canh giữa hình ảnh */
+            background-repeat: no-repeat;
+            /* Không lặp lại hình ảnh */
+            background-attachment: fixed;
+            /* Giữ hình ảnh nền cố định khi cuộn trang */
+         
+
+        }
+
+        .nd1-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-left: 0; 
+        }
+
+        /* .nd1 {
+            flex: 0 0 auto;
+            /* Không co giãn, không tự động co giãn, không cố định chiều rộng */
+            /* margin-right: 7px; */
+            /* Khoảng cách giữa các thẻ */
+         
+
+        .nd1 {
+            flex: 0 0 calc(20% - 7px);
+            /* 20% chiều rộng, trừ đi khoảng cách giữa các thẻ (7px) */
+            margin-right: 7px;
+          
+        }
+
+        .card {
+            height: 100%;
+            /* Đảm bảo chiều cao của thẻ đầy đủ */
+        }
+
+        .card img {
+            object-fit: cover;
+            /* Hiển thị hình ảnh sao cho nó che đầy toàn bộ kích thước của thẻ */
+            height: 100%;
+            /* Đảm bảo chiều cao của hình ảnh đầy đủ */
+            width: 100%;
+            /* Đảm bảo chiều rộng của hình ảnh đầy đủ */
+            border-radius: 5px;
+            /* Bo tròn góc hình ảnh */
+        }
+
+        .nd1 .card {
+            width: 288px;
+            /* thay thế 18rem bằng giá trị tương đương trong px */
+            height: 480px;
+            flex: 0 0 auto;
+            margin-right: 7px;
+
+        }
+
+        .card img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: aliceblue;
+            width: 100%;
+        }
+
+        h5:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        footer {
+            height: 40px;
+            /* Đặt chiều cao của footer là 40px */
+            background-color: #28a745;
+            /* Đặt màu nền cho footer, có thể thay đổi giá trị màu sắc theo ý của bạn */
+            color: white;
+            /* Đặt màu chữ trong footer, nếu cần thiết */
+            text-align: center;
+            /* Canh giữa nội dung trong footer */
+            padding-top: 10px;
+            /* Để tăng khoảng cách phía trên nội dung trong footer */
+        }
+
+
+
+        .nav-link.active {
+            background-color: blue;
+            color: white !important;
+            /* Sử dụng !important để đảm bảo ưu tiên */
+            border-radius: 5px;
+        }
+
+        .d-flex {
+            text-align: center;
+            /* Canh giữa các số trang */
+            align-items: center;
+            /* Căn giữa theo chiều dọc */
+            margin-top: 20px;
+            /* Thêm khoảng cách từ phía trên */
+        }
+
+        .d-flex ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            /* Canh giữa các số trang */
+        }
+
+        .d-flex li {
+            margin-right: 5px;
+        }
+
+        .d-flex li a {
+            display: block;
+            padding: 5px;
+            /* Giảm khoảng cách để làm cho số trang nhỏ hơn */
+            border-radius: 5px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+        }
+
+        .d-flex li a:hover {
+            background-color: #eee;
+        }
+       main{
+       
+        width: 100%;
+       }
+    </style> -->
+    <style>
+        main {
+            background-image: url(../AssignmentHT/img/anhnenMain.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .nd1-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-left: -7px; /* Thêm margin âm để lấp đầy khoảng trắng */
+        }
+
+        .nd1 {
+            flex: 0 0 calc(20% - 14px); /* 20% chiều rộng, trừ đi khoảng cách giữa các thẻ (7px * 2) */
+            margin-bottom: 20px; /* Thêm margin dưới để tạo khoảng cách giữa các dòng */
+            margin-right: 7px;
+        }
+
+        .nd1:last-child {
+            margin-right: 0;
+        }
+
+        .card {
+            height: 100%;
+        }
+
+        .card img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: aliceblue;
+            width: 100%;
+        }
+
+        h5:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        footer {
+            height: 40px;
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .nav-link.active {
+            background-color: blue;
+            color: white !important;
+            border-radius: 5px;
+        }
+
+        .d-flex {
+            text-align: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .d-flex ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .d-flex li {
+            margin-right: 5px;
+        }
+
+        .d-flex li a {
+            display: block;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+        }
+
+        .d-flex li a:hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/boo
+tstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootst
+rap.bundle.min.js"></script>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg d-flex justify-content-between bg-body-tertiary bg-success p-3">
+            <div class="text-white  ">
+                <img src="../AssignmentHT/img/logo.jpg" alt="" width="60px" height="60px" class="rounded">
+                <h4>S Du Lịch</h4>
+                <nav>Cuộc sống trải để trải nghiệm và khám phá</nav>
+            </div>
+            <div class="p-lg-1">
+                <div class="d-flex align-items-center">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" aria-label="Text input with checkbox">
+                        <div class="input-group-text">
+                            <input class="form-check-input mt-0" type="checkbox" value=""
+                                aria-label="Checkbox for following text input">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="../AssignmentHT/index.html">Trang chủ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../AssignmentHT/tintuc.html" target="_blank">Tin Tức</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../AssignmentHT/lienhe.html" target="_blank">Liên Hệ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+
+    </header>
+    <main>
+
+        <div class="container nd1-container">
+            <h2>Sản Phẩm Mới</h2>
+            <div class="nd1">
+                <div class="card" style="width: 18rem;">
+                    <img src="../AssignmentHT/img/anhthiennhien5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> <a href="" style="text-decoration: none; color: inherit;">Hạ Long</a>
+                        </h5>
+                        <p class="card-text">Tới nơi đây để chiêm nghưỡng kỳ quan phi vật thể của nhân loại ngay trước
+                            tầm mắt.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Mức Giá Tour</li>
+                        <li class="list-group-item">Các ưu đãi</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link" style="text-decoration: none;">Đặt Lịch Ngay</a>
+                        <a href="../AssignmentHT/lienhe.html" style="text-decoration: none;" class="card-link">Liên Hệ
+                            Trực Tiếp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nd1">
+                <div class="card" style="width: 18rem;">
+                    <img src="../AssignmentHT/img/anhthiennhien2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Bà Nà</h5>
+                        <p class="card-text">Còn chần chừ gì mà đến với thủ phủ tình yêu, trải nghiệm các dịch vụ đẳng
+                            cấp nhất.
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Mức Giá Tour</li>
+                        <li class="list-group-item">Các ưu đãi</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link" style="text-decoration: none;">Đặt Lịch Ngay</a>
+                        <a href="../AssignmentHT/lienhe.html" style="text-decoration: none;" class="card-link">Liên Hệ
+                            Trực Tiếp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nd1">
+                <div class="card" style="width: 18rem;">
+                    <img src="../AssignmentHT/img/anhthiennhien3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Ninh Bình</h5>
+                        <p class="card-text">Nơi ta thu trọn thiên nhiên hùng vĩ trong tầm mắt, còn chần chờ gì mà không
+                            đặt chân đến
+                            ngay hôm nay.
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Mức Giá Tour</li>
+                        <li class="list-group-item">Các ưu đãi</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link" style="text-decoration: none;">Đặt Lịch Ngay</a>
+                        <a href="../AssignmentHT/lienhe.html" style="text-decoration: none;" class="card-link">Liên Hệ
+                            Trực Tiếp</a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="nd1">
+                <div class="card" style="width: 18rem;">
+                    <img src="../AssignmentHT/img/anhthiennhien4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Tam Trúc</h5>
+                        <p class="card-text">Ngôi Chùa Tam Trúc lớn nhất ĐÔNG NAM Á tọa lạc giữa nơi thiên nhiên hùng
+                            vĩ, thanh tịnh.
+                            .
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Mức Giá Tour</li>
+                        <li class="list-group-item">Các ưu đãi</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link" style="text-decoration: none;">Đặt Lịch Ngay</a>
+                        <a href="../AssignmentHT/lienhe.html" style="text-decoration: none;" class="card-link">Liên Hệ
+                            Trực Tiếp</a>
+                    </div>
+                </div>
+            </div> -->
+           
+        </div>
+
+        <div class="container nd1-container">
+            <h2>Sản Phẩm Giảm Giá</h2>
+            <!-- <div class="nd1">
+                <div class="card" style="width: 18rem;">
+                    <img src="../AssignmentHT/img/anhthiennhien6.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Du Lịc 2 Ngày 1 Đêm</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Mức Giá Tour</li>
+                        <li class="list-group-item">Các ưu đãi</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link" style="text-decoration: none;">Đặt Lịch Ngay</a>
+                        <a href="../AssignmentHT/lienhe.html" style="text-decoration: none;" class="card-link">Liên Hệ
+                            Trực Tiếp</a>
+                    </div>
+                </div>
+            </div> -->
+            <div class="nd1">
+                <div class="card" style="width: 18rem;">
+                    <img src="../AssignmentHT/img/anhthiennhien7.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Du Lịch Cao Bằng</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Mức Giá Tour</li>
+                        <li class="list-group-item">Các ưu đãi</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link" style="text-decoration: none;">Đặt Lịch Ngay</a>
+                        <a href="../AssignmentHT/lienhe.html" style="text-decoration: none;" class="card-link">Liên Hệ
+                            Trực Tiếp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nd1">
+                <div class="card" style="width: 18rem;">
+                    <img src="../AssignmentHT/img/anhthiennhien8.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Du Lịch Biển</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Mức Giá Tour</li>
+                        <li class="list-group-item">Các ưu đãi</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link" style="text-decoration: none;">Đặt Lịch Ngay</a>
+                        <a href="../AssignmentHT/lienhe.html" style="text-decoration: none;" class="card-link">Liên Hệ
+                            Trực Tiếp</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <!-- <div class="nd1"> -->
+                <div class="card" style="width: 18rem;">
+                    <img src="../AssignmentHT/img/anhthiennhien10.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Du Lịch Nú</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                   
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Mức Giá Tour</li>
+                        <li class="list-group-item">Các ưu đãi</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link" style="text-decoration: none;">Đặt Lịch Ngay</a>
+                        <a href="../AssignmentHT/lienhe.html" style="text-decoration: none;" class="card-link">Liên Hệ
+                            Trực Tiếp</a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="d-flex">
+            <ul class="d-flex m-auto pb-2">
+                <li><a href="" style="background-color: blue; color: white;">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">...</a></li>
+            </ul>
+        </div>
+    </main>
+    <footer class="">
+        <div class="text-center">
+            Bản quyền thuộc media
+        </div>
+
+    </footer>
+</body>
+
+</html>
